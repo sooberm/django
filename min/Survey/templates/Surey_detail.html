@@ -1,0 +1,8 @@
+
+<h3>Detail:{{object.title}}</h3>
+{% for e in object_optin %}
+<a href="{% url 'submit' oid=e.id %}"><p><span>{{e.name}}</span>--->{{e.rate}}in {{total}}</p></a>
+{% endfor %}
+<hr>
+<span>{{object.created_on}}</span>
+<hr>

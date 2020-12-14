@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+</head>
+<body>
+
+
+    <h1> لیست سوال های نظر سنجی </h1>
+
+    {% for e in object_list %}
+        <p>{{e.id}}</p>
+        <a href="{% url 'SureyDetail' e.id %}" ><h3> {{e.title}}</h3></a>
+       
+        <hr>
+        {{e.created_on}}
+        <hr>
+        <br>
+    {% endfor %}
+</body>
+</html>
