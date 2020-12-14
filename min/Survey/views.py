@@ -87,7 +87,7 @@ def SureyDetail(request, pk):
 
     return render(request, 'Surey_detail.html', context)
 
-@login_required(login_url='/signin')
+@login_required(login_url='signup')
 def submit(request , oid) : 
     if request.method == 'GET':
       optn = get_object_or_404(option , id = oid)
